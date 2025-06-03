@@ -1,21 +1,22 @@
-import React from "react";
-import Img from "./components/ImgProfile.jsx";
-import Folk from "./assets/folk.jpg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import InsertSkill from "./page/skill.jsx"; // Adjust the import path as necessary
+import { HeroUIProvider } from "@heroui/react";
+import Navbar from "./components/Navbar.jsx";
+import Port from "./page/port.jsx";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+
 
 function App() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-background text-foreground px-6">
-      {/* ข้อความฝั่งซ้าย */}
-      <div className="max-w-md mr-10">
-        <h1 className="text-3xl font-bold ">Hi, I'm FOLK</h1>
-        <h2 className="text-3xl font-bold ">
-          I'M A <a className="text text-blue-">REACT DEVELOPER</a>
-        </h2>
-        <h2 className="text-3xl font-bold mb-4">WEB DEVELOPER</h2>
-      </div>
-      {/* รูปฝั่งขวา */}
-      <Img src={Folk} />
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Port />} />
+        <Route path="/insertSkill" element={<InsertSkill />} />
+        
+      </Routes>
+    </BrowserRouter>
   );
 }
 

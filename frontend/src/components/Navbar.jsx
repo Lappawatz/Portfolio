@@ -1,47 +1,98 @@
-import React from "react";
-import { Link } from "@heroui/react";
+import { useState } from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  Link,
+  Button,
+} from "@heroui/react";
+import { useLocation, useNavigate } from "react-router-dom";
 
-export default function App() {
+export default function NavigationBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const menuItems = [
+    { name: "Home", path: "/#home" },
+    { name: "Projects", path: "/#projects" },
+    { name: "Contact", path: "/#contact" },
+  ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-700">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold text-slate-900 dark:text-white">
-            Portfolio
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700"
+      maxWidth="xl"
+    >
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+        <NavbarBrand>
+          <div className="font-bold text-2xl bg-black bg-clip-text text-transparent">
+            Folk.DEV
           </div>
-          <div className="hidden md:flex space-x-8">
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-8" justify="center">
+        {menuItems.map((item) => (
+          <NavbarItem key={item.path}>
             <Link
-              href="#home"
-              className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
-              underline="hover"
+              href={item.path} // เช่น "#projects"
+              className={`font-medium transition-all duration-300 hover:scale-105 scroll-smooth ${
+                location.hash === item.path
+                  ? "text-blue-600 dark:text-blue-400"
+                  : "text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400"
+              }`}
+              onClick={(e) => {
+                e.preventDefault(); // ป้องกันการ jump
+                const sectionId = item.path.replace("/", "").replace("#", "");
+                const section = document.getElementById(sectionId);
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
-              Home
+              {item.name}
             </Link>
+          </NavbarItem>
+        ))}
+      </NavbarContent>
+
+      <NavbarContent justify="end">
+        <NavbarItem>
+          <Button
+            color="primary"
+            variant="flat"
+            className="bg-blue-500 text-white hover:scale-105 transition-transform"
+            // onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            Contact Me
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item.name}-${index}`}>
             <Link
-              href="#about"
-              className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
-              underline="hover"
+              color={location.pathname === item.path ? "primary" : "foreground"}
+              className="w-full"
+              href={item.path}
+              size="lg"
             >
-              About
+              {item.name}
             </Link>
-            <Link
-              href="#projects"
-              className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
-              underline="hover"
-            >
-              Projects
-            </Link>
-            <Link
-              href="#contact"
-              className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
-              underline="hover"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-      </div>
-    </nav>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
+    </Navbar>
   );
 }
