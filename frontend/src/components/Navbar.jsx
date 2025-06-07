@@ -25,9 +25,9 @@ export default function NavigationBar() {
 
   return (
     <Navbar
+      isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700"
-      maxWidth="xl"
     >
       <NavbarContent>
         <NavbarMenuToggle

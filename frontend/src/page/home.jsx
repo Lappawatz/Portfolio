@@ -38,8 +38,8 @@ export default function PortfolioLanding() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       {/* Hero Section */}
-      <section id="home" className="pt-10 md:pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+      <section id="home" className="pt-10 md:pt-20 pb-16 px-0 sm:px-6 lg:px-8">
+        <div className="w-full"> {/* เปลี่ยนจาก max-w-6xl mx-auto เป็น w-full */}
           <div className="text-center py-1">
             <div className="mb-8 justify-center flex">
               <Img src={Profile} />
@@ -227,7 +227,7 @@ export default function PortfolioLanding() {
 
                 <MotionRight delay={1.1}>
                   <Card
-                    className="text-center  w-full bg-amber-50 dark:bg-gray-900"
+                    className="text-center w-full bg-amber-50 dark:bg-gray-900"
                     isPressable
                   >
                     <CardBody className="p-6">
