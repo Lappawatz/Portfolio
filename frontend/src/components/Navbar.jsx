@@ -11,7 +11,7 @@ import {
   Button,
 } from "@heroui/react";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import MotionChar from "./motion/MotionChar.jsx"; // Assuming you have a MotionChar component
 export default function NavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -19,8 +19,8 @@ export default function NavigationBar() {
 
   const menuItems = [
     { name: "Home", path: "/#home" },
+    { name: "About", path: "/#about" },
     { name: "Projects", path: "/#projects" },
-    { name: "Contact", path: "/#contact" },
   ];
 
   return (
@@ -34,9 +34,10 @@ export default function NavigationBar() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
+
         <NavbarBrand>
-          <div className="font-bold text-2xl bg-black bg-clip-text text-transparent">
-            Folk.DEV
+          <div className="font-bold text-2xl  dark:text-white bg-clip-text text-transparent bg-gradient-to-r from-black to-blue-600">
+            <MotionChar />
           </div>
         </NavbarBrand>
       </NavbarContent>
@@ -57,6 +58,7 @@ export default function NavigationBar() {
                 const section = document.getElementById(sectionId);
                 if (section) {
                   section.scrollIntoView({ behavior: "smooth" });
+                  setIsMenuOpen(false); // ปิดเมนูหลังคลิก
                 }
               }}
             >
@@ -71,28 +73,45 @@ export default function NavigationBar() {
           <Button
             color="primary"
             variant="flat"
-            className="bg-blue-500 text-white hover:scale-105 transition-transform"
-            // onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            className="bg-blue-600 text-white hover:scale-105 transition-transform font-semibold"
+            onClick={() =>
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Contact Me
           </Button>
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item.name}-${index}`}>
-            <Link
-              color={location.pathname === item.path ? "primary" : "foreground"}
-              className="w-full"
-              href={item.path}
-              size="lg"
-            >
-              {item.name}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
+      {isMenuOpen && (
+        <NavbarMenu>
+          {menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item.name}-${index}`}>
+              <Link
+                color={
+                  location.pathname === item.path ? "primary" : "foreground"
+                }
+                className="w-full"
+                href={item.path}
+                size="lg"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const sectionId = item.path.replace("/", "").replace("#", "");
+                  const section = document.getElementById(sectionId);
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                    setIsMenuOpen(false); // ปิดเมนูหลังคลิก
+                  }
+                }}
+              >
+                {item.name}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
+      )}
     </Navbar>
   );
 }
