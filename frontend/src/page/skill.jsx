@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Input, Button, Card } from "@heroui/react";
-
+import { API_URL } from "./url.jsx"; // Adjust the import path as necessary
 export default function App() {
   const [action, setAction] = React.useState(null);
 
@@ -11,7 +11,7 @@ export default function App() {
     setAction(`submit ${JSON.stringify(data)}`);
 
     try {
-      const res = await fetch("http://localhost:5000/api/skills", {
+      const res = await fetch(API_URL + "/api/skills", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
