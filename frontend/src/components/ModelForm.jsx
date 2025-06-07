@@ -26,14 +26,25 @@ export default function Message({ onClose }) {
   return (
     <Form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 items-center  "
+      className="flex flex-col gap-4 items-center w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto p-4 sm:p-6"
     >
-      {/* input fields เหมือนเดิม */}
-      <h1 className="m-2 text-2xl font-bold">Send a Message</h1>
-      <Input name="name" label="Your name" isRequired className="" />
-      <Input name="email" label="Email" type="email" isRequired />
-      <Textarea name="message" label="Message" isRequired />
-      <Button color="primary" type="submit">
+      <h1 className="m-2 text-2xl font-bold text-center">Send a Message</h1>
+      <Input name="name" label="Your name" isRequired className="w-full" />
+      <Input
+        name="email"
+        label="Email"
+        type="email"
+        isRequired
+        className="w-full"
+      />
+      <Textarea
+        name="message"
+        label="Message"
+        isRequired
+        className="w-full"
+        minRows={3}
+      />
+      <Button color="primary" type="submit" className="w-full">
         Send
       </Button>
     </Form>
