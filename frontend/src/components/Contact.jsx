@@ -119,7 +119,7 @@ function Contact() {
             </a>
 
             <a
-              href="https://line.me/ti/p/@nua11111" // <-- เปลี่ยนตรงนี้
+              href="https://line.me/ti/p/@farokfolk" // <-- เปลี่ยนตรงนี้
               target="_blank"
               rel="noopener noreferrer"
             >
