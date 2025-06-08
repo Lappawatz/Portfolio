@@ -36,11 +36,16 @@ export default function PortfolioLanding() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 ">
       {/* Hero Section */}
-      <section id="home" className="pt-10 md:pt-20 pb-16 px-0 sm:px-6 lg:px-8">
-        <div className="w-full"> {/* เปลี่ยนจาก max-w-6xl mx-auto เป็น w-full */}
-          <div className="text-center py-1">
+      <section
+        id="home"
+        className="pt-10 md:pt-20 pb-16 px-10 sm:px-6 lg:px-8 mt-10 md:mt-10"
+      >
+        <div className="w-full">
+          {" "}
+          {/* เปลี่ยนจาก max-w-6xl mx-auto เป็น w-full */}
+          <div className="text-center py-1 ">
             <div className="mb-8 justify-center flex">
               <Img src={Profile} />
             </div>
