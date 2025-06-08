@@ -117,10 +117,67 @@ function Contact() {
                 </CardBody>
               </Card>
             </a>
+
+            <a
+              href="https://line.me/ti/p/@farokfolk" // <-- เปลี่ยนตรงนี้
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Card
+                className="text-center w-full hover:scale-105 transition-transform duration-200"
+                isPressable
+              >
+                <CardBody className="w-full p-6 justify-center items-center ">
+                  <svg
+                    className="h-8 w-8 text-green-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>LINE</title>
+                    <path d="M19.664 3.035C17.967 1.337 15.389.5 12.675.5 6.708.5 2 4.883 2 10.29c0 2.655 1.188 5.1 3.188 6.978v3.605c0 .195.105.376.276.472a.494.494 0 0 0 .237.06.53.53 0 0 0 .267-.07l4.195-2.43c.635.123 1.285.186 1.933.186 5.967 0 10.675-4.383 10.675-9.79 0-2.715-.838-5.292-2.535-6.99z" />
+                  </svg>
+
+                  <h3 className="font-semibold text-slate-900 dark:text-white mb-2">
+                    LINE
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-300">
+                    @farokfolk
+                  </p>
+                </CardBody>
+              </Card>
+            </a>
+
+            <a
+              href="https://www.facebook.com/lappawat.yahtung/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Card
+                className="text-center w-full hover:scale-105 transition-transform duration-200"
+                isPressable
+              >
+                <CardBody className="w-full p-6 justify-center items-center ">
+                  <svg
+                    className="h-8 w-8 text-blue-600 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.893-4.788 4.658-4.788 1.325 0 2.464.098 2.795.142v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z" />
+                  </svg>
+                  <h3 className="font-semibold text-slate-900 dark:text-white mb-2">
+                    Facebook
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-300">
+                    facebook.com/Lappawat Yahtung
+                  </p>
+                </CardBody>
+              </Card>
+            </a>
           </div>
         </MotionLeft>
 
-        <Button
+        {/* <Button
           color="success"
           size="lg"
           startContent={<EnvelopeSolid className="w-5 h-5" />}
@@ -128,7 +185,7 @@ function Contact() {
           onClick={() => setIsOpen(true)}
         >
           Send Message
-        </Button>
+        </Button> */}
 
         <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
           <ModalContent>
