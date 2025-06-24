@@ -6,7 +6,7 @@ import kshop from "../assets/imgProjects/epict.jpg";
 import moneyc from "../assets/imgProjects/moneyChange.jpg";
 import moneyi from "../assets/imgProjects/moneyIncome.jpg";
 import todo from "../assets/imgProjects/todo.jpg";
-import holiday from "../assets/imgProjects/holiday.jpg";
+import holiday from "../assets/imgProjects/Holiday.jpg";
 
 const cardVariants = {
   hidden: { opacity: 0, x: 50 },
