@@ -5,7 +5,7 @@ import MotionRight from "./motion/MotionRight.jsx";
 import { useNavigate } from "react-router-dom";
 import Scg from "../assets/LogoScg.png";
 import Img from "./ImgProfile.jsx";
-import PSU from "../assets/lgPSU.png";
+import Psu from "../assets/LogoPsu.png";
 import {
   CodeBracketIcon,
   PaintBrushIcon,
@@ -148,7 +148,7 @@ export default function About() {
             <MotionLeft delay={0.4}>
               <div className="flex items-center gap-4">
                 <Img
-                  src={PSU}
+                  src={Psu}
                   alt="SCG"
                   width="100"
                   height="100"
