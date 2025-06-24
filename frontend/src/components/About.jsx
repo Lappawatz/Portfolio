@@ -4,8 +4,8 @@ import MotionLeft from "./motion/MotionLeft.jsx";
 import MotionRight from "./motion/MotionRight.jsx";
 import { useNavigate } from "react-router-dom";
 import Scg from "../assets/LogoScg.png";
-import Img from "./ImgProfile.jsx";
 import Psu from "../assets/LogoPsu.png";
+import Img from "./ImgProfile.jsx";
 import {
   CodeBracketIcon,
   PaintBrushIcon,
