@@ -6,6 +6,7 @@ import kshop from "../assets/imgProjects/epict.jpg";
 import moneyc from "../assets/imgProjects/moneyChange.jpg";
 import moneyi from "../assets/imgProjects/moneyIncome.jpg";
 import todo from "../assets/imgProjects/todo.jpg";
+import holiday from "../assets/imgProjects/holiday.jpg";
 
 const cardVariants = {
   hidden: { opacity: 0, x: 50 },
@@ -79,6 +80,15 @@ function Project() {
       image: kshop,
       tags: ["EJS", "Node.js", "Express.js", "MongoDB", "CSS"],
       github: "https://github.com/Lappawatz/K-SHOP",
+      demo: "#",
+    },
+    {
+      title: "Holiday management systems",
+      description:
+        "A leave request system with form submission, validation, and data display using Next.js and Node.js.",
+      image: holiday,
+      tags: ["TypeScript", "Next.js", "Node.js", "Express.js", "SQL Server"],
+      github: "https://github.com/Lappawatz/HolidaySys",
       demo: "#",
     },
   ];
