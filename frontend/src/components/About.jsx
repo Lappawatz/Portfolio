@@ -69,7 +69,7 @@ export default function About() {
             <div className="grid grid-cols-2 gap-6">
               <MotionRight delay={0.5}>
                 <Card
-                  className="text-center bg-blue-50 dark:bg-gray-900 "
+                  className="text-center bg-blue-50 dark:bg-gray-900 shadow-lg shadow-indigo-300 hover:scale-105 transition-transform duration-200"
                   isPressable
                 >
                   <CardBody className="p-6">
@@ -86,7 +86,7 @@ export default function About() {
 
               <MotionRight delay={0.7}>
                 <Card
-                  className="text-center bg-green-50 dark:bg-gray-900"
+                  className="text-center bg-green-50 dark:bg-gray-900 shadow-lg shadow-green-300 hover:scale-105 transition-transform duration-200"
                   isPressable
                 >
                   <CardBody className="p-6">
@@ -103,7 +103,7 @@ export default function About() {
 
               <MotionRight delay={0.9}>
                 <Card
-                  className="text-center bg-purple-50 dark:bg-gray-900"
+                  className="text-center bg-purple-50 dark:bg-gray-900 shadow-lg shadow-violet-300 hover:scale-105 transition-transform duration-200"
                   isPressable
                 >
                   <CardBody className="p-6">
@@ -120,7 +120,7 @@ export default function About() {
 
               <MotionRight delay={1.1}>
                 <Card
-                  className="text-center w-full bg-amber-50 dark:bg-gray-900"
+                  className="text-center w-full bg-amber-50 dark:bg-gray-900 shadow-lg shadow-orange-200 hover:scale-105 transition-transform duration-200"
                   isPressable
                 >
                   <CardBody className="p-6">

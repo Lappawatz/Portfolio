@@ -42,7 +42,7 @@ export default function Hero() {
                 color="primary"
                 size="lg"
                 startContent={<DocumentArrowDownIcon className="w-5 h-5" />}
-                className="bg-blue-600 hover:bg-blue-400 text-white hover:scale-105 transition-transform duration-200"
+                className="bg-blue-600 hover:bg-blue-400 text-white hover:scale-105 transition-transform duration-200 hover:-rotate-3"
               >
                 Download Resume
               </Button>
@@ -52,6 +52,7 @@ export default function Hero() {
                 variant="bordered"
                 size="lg"
                 startContent={<EnvelopeIcon className="w-5 h-5" />}
+                className="text-blue-950 border-blue-900 hover:bg-blue-600 hover:text-white hover:scale-105 transition-transform duration-200 hover:rotate-3"
               >
                 Get In Touch
               </Button>

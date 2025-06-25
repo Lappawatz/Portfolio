@@ -31,7 +31,7 @@ function Contact() {
           <div className="grid grid-cols-1 sm:grid-cols-2  gap-8 mb-12 justify-center ">
             <a href="mailto:lappawatyahtung@gmail.com">
               <Card
-                className="text-center w-full hover:scale-105 transition-transform duration-200"
+                className="text-center w-full hover:scale-105 hover:-rotate-3 transition-transform duration-200"
                 isPressable
               >
                 <CardBody className=" p-6 justify-center items-center">
@@ -52,7 +52,7 @@ function Contact() {
               rel="noopener noreferrer"
             >
               <Card
-                className="text-center w-full hover:scale-105 transition-transform duration-200"
+                className="text-center w-full hover:scale-105 hover:rotate-3 transition-transform duration-200"
                 isPressable
               >
                 <CardBody className="w-full p-6 justify-center items-center">
@@ -75,7 +75,7 @@ function Contact() {
 
             <a href="tel:+66808739431">
               <Card
-                className="text-center w-full hover:scale-105 transition-transform duration-200"
+                className="text-center w-full hover:scale-105 hover:-rotate-3 transition-transform duration-200"
                 isPressable
               >
                 <CardBody className="w-full p-6 justify-center items-center">
@@ -97,7 +97,7 @@ function Contact() {
               rel="noopener noreferrer"
             >
               <Card
-                className="text-center w-full hover:scale-105 transition-transform duration-200"
+                className="text-center w-full hover:scale-105 hover:rotate-3 transition-transform duration-200"
                 isPressable
               >
                 <CardBody className="w-full p-6 justify-center items-center ">
@@ -124,7 +124,7 @@ function Contact() {
               rel="noopener noreferrer"
             >
               <Card
-                className="text-center w-full hover:scale-105 transition-transform duration-200"
+                className="text-center w-full hover:scale-105 hover:-rotate-3 transition-transform duration-200"
                 isPressable
               >
                 <CardBody className="w-full p-6 justify-center items-center ">
@@ -154,7 +154,7 @@ function Contact() {
               rel="noopener noreferrer"
             >
               <Card
-                className="text-center w-full hover:scale-105 transition-transform duration-200"
+                className="text-center w-full hover:scale-105 transition-transform duration-200 hover:rotate-3"
                 isPressable
               >
                 <CardBody className="w-full p-6 justify-center items-center ">
