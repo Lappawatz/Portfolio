@@ -96,7 +96,7 @@ function Project() {
   return (
     <section
       id="projects"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-800"
+      className="py-20 px-4 sm:px-2 lg:px-8 bg-white dark:bg-slate-800"
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
@@ -113,7 +113,7 @@ function Project() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0 }}
         >
           {projects.map((project, index) => (
             <motion.div key={index} variants={cardVariants}>
