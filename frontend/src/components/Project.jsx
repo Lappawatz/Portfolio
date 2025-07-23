@@ -7,7 +7,7 @@ import moneyc from "../assets/imgProjects/moneyChange.jpg";
 import moneyi from "../assets/imgProjects/moneyIncome.jpg";
 import todo from "../assets/imgProjects/todo.jpg";
 import holiday from "../assets/imgProjects/Holiday.jpg";
-
+import nail from "../assets/imgProjects/nails.jpg";
 const cardVariants = {
   hidden: { opacity: 0, x: 50 },
   visible: {
@@ -31,10 +31,19 @@ function Project() {
     {
       title: "Develop Cement Plant SCG",
       description:
-        "Developed a web-based system to track skill application and machine usage after training. Included evaluations, point rewards, and a dynamic UI",
+        "Developed a web-based system to track skill application and machine usage after training. Included evaluations, point rewards, and a dynamic UI.",
       image: scg,
       tags: ["React", "PHP Laravel", "SQL server", "DaisyUI", "Tailwind CSS"],
       github: "https://github.com/Lappawatz/Cosmic-complier",
+      demo: "#",
+    },
+    {
+      title: "Nails salon",
+      description:
+        "Nail salon website for booking appointments and showcasing work.",
+      image: nail,
+      tags: ["React", "Next.js", "Tailwind CSS"],
+      github: "https://github.com/Lappawatz/NailsSalon",
       demo: "#",
     },
     {
